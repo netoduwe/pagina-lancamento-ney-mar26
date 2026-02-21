@@ -9,6 +9,27 @@ const Hero = () => {
             position: 'relative'
         }}>
 
+            {/* Premium Animated Grid */}
+            <div className="bg-premium-grid"></div>
+
+            {/* Floating Glow Orbs */}
+            <div className="glow-orb" style={{
+                top: '5%',
+                left: '20%',
+                width: '400px',
+                height: '400px',
+                background: 'rgba(214, 179, 96, 0.08)', // Subtle Gold
+            }}></div>
+            <div className="glow-orb" style={{
+                top: '30%',
+                right: '15%',
+                width: '500px',
+                height: '500px',
+                background: 'rgba(247, 245, 240, 0.03)', // Very faint cream
+                animationDelay: '-5s', // Offset animation
+                animationDuration: '15s'
+            }}></div>
+
             {/* Background Glow Effect specific to Hero */}
             <div style={{
                 position: 'absolute',

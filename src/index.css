@@ -1,32 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
 :root {
-  /* Premium Palette - Deep Space & Metallic Gold */
-  --bg-deep: #050511;
-  /* Almost black blue */
-  --bg-surface: #0B0B1E;
+  /* Premium Palette - Match Reference */
+  --bg-deep: #0B0E14;
+  /* Very dark rich navy/black */
+  --bg-surface: #151A22;
+  /* Slightly lighter deep surface */
 
-  /* Metallic Gold (Apple-like) */
-  --gold-primary: #D4AF37;
-  --gold-light: #F3E5AB;
-  --gold-mid: #C5A028;
-  /* Added missing variable */
-  --gold-dim: #8A7338;
+  /* Metallic Gold */
+  --gold-primary: #D6B360;
+  /* Adjusted to match reference gold */
+  --gold-light: #F3E3B6;
+  --gold-mid: #C29D48;
+  --gold-dim: #997A36;
 
   /* Text */
   --text-primary: #F8FAFC;
   --text-secondary: #E2E8F0;
-  /* Lightened from #94A3B8 */
-  --text-tertiary: #94A3B8;
-  /* Lightened from #64748B */
+  --text-tertiary: #A0AAB8;
 
   /* Text on Light Backgrounds */
-  --text-on-light: #0F172A;
-  /* Deep Blue/Black for light sections */
-  --text-muted-on-light: #475569;
+  --text-on-light: #0B0E14;
+  /* Use the deep color for text on light */
+  --text-muted-on-light: #4A5568;
 
   /* Backgrounds */
-  --bg-light: #F8FAFC;
+  --bg-light: #F7F5F0;
+  /* Cream / Warm off-white */
   --bg-white: #FFFFFF;
 
   /* Spacing & Layout */
@@ -112,19 +112,18 @@ p {
 
 /* Premium Buttons */
 .btn-cta {
-  background: linear-gradient(180deg, #F3E5AB 0%, #D4AF37 100%);
-  color: #1a1a1a;
+  background: var(--gold-primary);
+  color: #12161f;
   padding: 18px 48px;
-  border-radius: 100px;
+  border-radius: 8px;
+  /* Less rounded like reference */
   border: none;
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.125rem;
   letter-spacing: -0.01em;
   cursor: pointer;
-  box-shadow:
-    0 10px 20px -5px rgba(212, 175, 55, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 14px -4px rgba(214, 179, 96, 0.4);
   /* Inner highlight */
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
@@ -145,9 +144,7 @@ p {
 
 .btn-cta:hover {
   transform: scale(1.02);
-  box-shadow:
-    0 15px 30px -5px rgba(212, 175, 55, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 20px -6px rgba(214, 179, 96, 0.6);
 }
 
 .btn-cta:hover::after {
@@ -162,7 +159,7 @@ p {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 140px 0;
   /* More breathing room */
 }
 
@@ -178,9 +175,47 @@ p {
   transform: translateY(0);
 }
 
-/* Custom Gradients */
+/* Custom Gradients & Backgrounds */
 .bg-spotlight {
-  background: radial-gradient(circle at 50% 0%, #1a1a3a 0%, var(--bg-deep) 60%);
+  background: radial-gradient(circle at 50% 0%, #151A22 0%, var(--bg-deep) 65%);
+}
+
+.bg-premium-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 60px 60px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at 50% 30%, black 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 30%, black 20%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  animation: float 10s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-40px) scale(1.05);
+  }
 }
 
 .bg-dark {
@@ -191,18 +226,19 @@ p {
   background-color: var(--bg-surface);
 }
 
-/* Premium Pain Card */
+/* Premium Pain Card / General Card */
 .pain-card {
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   background: var(--bg-white);
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(15, 23, 42, 0.04);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.06);
 }
 
 .pain-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-  border-color: rgba(239, 68, 68, 0.2);
+  box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.12);
+  border-color: rgba(239, 68, 68, 0.15);
 }
 
 .pain-card .icon-box {

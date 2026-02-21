@@ -22,12 +22,14 @@ const PainPoints = () => {
 
     return (
         <section className="section-padding fade-in-section" style={{
-            background: 'radial-gradient(circle at 50% 0%, #ffffff 0%, var(--bg-light) 100%)',
+            background: 'var(--bg-light)',
             textAlign: 'center',
-            padding: '120px 0',
             position: 'relative',
             overflow: 'hidden'
         }}>
+            {/* Soft border indicator of transition */}
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '1px', background: 'linear-gradient(90deg, transparent, rgba(15, 23, 42, 0.05), transparent)' }}></div>
+
             {/* Soft decorative element */}
             <div style={{ position: 'absolute', top: '10%', right: '-10%', width: '400px', height: '400px', background: 'rgba(212, 175, 55, 0.03)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none' }}></div>
 
@@ -48,7 +50,7 @@ const PainPoints = () => {
                 }}>
                     {points.map((point, index) => (
                         <div key={index} className="pain-card" style={{
-                            padding: '3rem',
+                            padding: '4rem 3rem',
                             textAlign: 'left',
                             borderRadius: '32px',
                             display: 'flex',

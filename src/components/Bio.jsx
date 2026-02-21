@@ -1,4 +1,5 @@
 import React from 'react';
+import neyImg from '../assets/ney.webp';
 
 const Bio = () => {
     return (
@@ -13,9 +14,7 @@ const Bio = () => {
                         border: '1px solid rgba(255,255,255,0.1)'
                     }}>
                         {/* Placeholder for Ney Image */}
-                        <div style={{ width: '100%', height: '100%', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-tertiary)' }}>
-                            FOTO NEY FELIPE
-                        </div>
+                        <img src={neyImg} alt="Prof. Ney Felipe" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
 
                     <div>

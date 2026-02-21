@@ -9,6 +9,8 @@ import Bio from './components/Bio';
 import Offer from './components/Offer';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import CourseDetails from './components/CourseDetails';
+import ConsumerWeek from './components/ConsumerWeek';
 import './index.css';
 
 function App() {
@@ -30,7 +32,9 @@ function App() {
       <Hero />
       <PainPoints />
       <Masterclass />
+      <ConsumerWeek />
       <Solution />
+      <CourseDetails />
       <Bio />
       <SocialProof />
       <Offer />
