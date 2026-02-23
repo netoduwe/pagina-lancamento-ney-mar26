@@ -11,6 +11,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import CourseDetails from './components/CourseDetails';
 import ConsumerWeek from './components/ConsumerWeek';
+import LeadModal from './components/LeadModal';
 import './index.css';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       <Offer />
       <FAQ />
       <Footer />
+      <LeadModal />
     </div>
   );
 }

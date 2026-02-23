@@ -36,7 +36,7 @@ const Offer = () => {
                 </span>
 
                 <h2 className="font-serif" style={{ fontSize: '3rem', margin: '2rem 0 1rem', color: 'var(--text-primary)' }}>
-                    Por que entrar para a <span className="text-gold-gradient">Turma Fundadora</span> agora?
+                    Por que entrar <span className="text-gold-gradient">nessa turma</span> agora?
                 </h2>
 
                 <p style={{ fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 4rem', color: 'var(--text-tertiary)' }}>
@@ -52,16 +52,18 @@ const Offer = () => {
                     transform: 'scale(1.05)',
                     boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
                 }}>
-                    <div style={{ textDecoration: 'line-through', color: 'var(--text-tertiary)', fontSize: '1.5rem' }}>
-                        De R$ 7.400,00
+                    <div style={{ textDecoration: 'line-through', color: 'var(--text-tertiary)', fontSize: '1.2rem', marginBottom: '0.5rem' }}>
+                        De R$ 7.000,00
                     </div>
-                    <div style={{ fontSize: '2.5rem', fontWeight: '800', margin: '1.5rem 0', fontFamily: 'var(--font-serif)', lineHeight: '1.2', color: 'var(--text-primary)' }}>
-                        Desconto de até <br />
-                        <span className="text-gold-gradient" style={{ fontSize: '3.5rem' }}>R$ 2.500,00</span>
+                    <div style={{ fontSize: '1.1rem', color: 'var(--text-tertiary)', lineHeight: '1.6', marginBottom: '0.5rem' }}>
+                        <span style={{ textDecoration: 'line-through' }}>R$ 400 matrícula</span>
                     </div>
-                    <p style={{ color: 'var(--gold-mid)', fontWeight: 'bold', margin: '1rem 0', fontSize: '1.1rem' }}>
-                        + Taxa de Matrícula ZERO
-                    </p>
+                    <div style={{ fontSize: '2rem', fontWeight: '800', margin: '1.5rem 0 0.5rem', color: 'var(--text-primary)' }}>
+                        O Maior Desconto do Ano
+                    </div>
+                    <div style={{ fontSize: '1.1rem', color: 'var(--gold-mid)', fontWeight: 600, marginBottom: '1.5rem' }}>
+                        Pós Graduação Online
+                    </div>
 
                     <div style={{ height: '1px', background: 'rgba(255,255,255,0.1)', margin: '2rem 0' }}></div>
 
@@ -77,12 +79,20 @@ const Offer = () => {
                         </li>
                     </ul>
 
-                    <button className="btn-cta" style={{ width: '100%', fontSize: '1.2rem' }}>
+                    <button
+                        className="btn-cta"
+                        style={{ width: '100%', fontSize: '1.2rem' }}
+                        onClick={() => window.dispatchEvent(new Event('open-lead-modal'))}
+                    >
                         QUERO APROVEITAR A OFERTA
                     </button>
                     <p style={{ fontSize: '0.85rem', marginTop: '1.5rem', color: 'var(--text-tertiary)' }}>
                         *Condição exclusiva para a Turma Fundadora
                     </p>
+                    <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', marginTop: '2rem', paddingTop: '1.5rem', textAlign: 'left' }}>
+                        <p style={{ color: 'var(--gold-mid)', fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.5rem' }}>Tenho acesso por quanto tempo?</p>
+                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6', margin: 0 }}>Você terá 2 anos de acesso irrestrito a todo o conteúdo da Pós.</p>
+                    </div>
                 </div>
             </div>
         </section>

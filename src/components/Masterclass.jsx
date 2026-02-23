@@ -51,7 +51,7 @@ const Masterclass = () => {
                     </div>
 
                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2.5rem' }}>
-                        <button className="btn-cta">
+                        <button className="btn-cta" onClick={() => window.dispatchEvent(new Event('open-lead-modal'))}>
                             Quero Participar da Aula
                         </button>
                     </div>

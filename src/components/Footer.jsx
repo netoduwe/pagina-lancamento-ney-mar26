@@ -7,7 +7,7 @@ const Footer = () => {
                 <p className="font-serif" style={{ marginBottom: '1.5rem', fontWeight: 'bold', color: 'white', fontSize: '1.5rem' }}>
                     Garanta que o seu nome esteja na lista da Turma Fundadora.
                 </p>
-                <button className="btn-cta" style={{ marginBottom: '3rem', fontSize: '1rem', padding: '12px 30px' }}>
+                <button className="btn-cta" style={{ marginBottom: '3rem', fontSize: '1rem', padding: '12px 30px' }} onClick={() => window.dispatchEvent(new Event('open-lead-modal'))}>
                     QUERO ME INSCREVER NA AULA E GARANTIR O DESCONTO
                 </button>
                 <div style={{ borderTop: '1px solid #1E293B', paddingTop: '2rem', fontSize: '0.9rem' }}>

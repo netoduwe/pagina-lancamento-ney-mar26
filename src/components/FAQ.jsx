@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 
 const FAQ = () => {
     const questions = [
-        { q: "Para quem é o curso?", a: "Para nutricionistas graduados que buscam segurança e autoridade clínica." },
-        { q: "Estudantes podem participar?", a: "Podem assistir à aula gratuita, mas a matrícula na Pós requer diploma de graduação." },
+        {
+            q: "Para quem é o curso?",
+            a: "Para nutricionistas graduados que buscam segurança e autoridade clínica.\n\n✅ Nutricionistas graduados\n✅ Nutris recém-formadas(os) que querem mais segurança para atender\n✅ Profissionais buscando atualização e valorização de mercado\n\n📌 ESTUDANTES: É necessário já possuir uma graduação de ensino superior. Caso você seja estudante e ainda não possua outra graduação, você pode iniciar na Formação Nutrição Avançada e, quando se formar, entrar para a Pós com desconto de aluno."
+        },
+        { q: "Estudantes podem participar?", a: "Podem assistir à aula gratuita, mas a matrícula na Pós requer diploma de graduação superior. Estudantes podem começar pela Formação Nutrição Avançada e migrar para a Pós com desconto ao se formarem." },
         { q: "Tem certificado?", a: "Sim, Pós-graduação Lato Sensu reconhecida pelo MEC (Certificação Anhanguera)." },
-        { q: "Tenho acesso por quanto tempo?", a: "Você terá 3 anos de acesso irrestrito a todo o conteúdo e atualizações." }
+        { q: "Tenho acesso por quanto tempo?", a: "Você terá 2 anos de acesso irrestrito a todo o conteúdo da Pós." }
     ];
 
     const [openIndex, setOpenIndex] = useState(null);
@@ -43,7 +46,7 @@ const FAQ = () => {
                                     opacity: isOpen ? 1 : 0,
                                     marginTop: isOpen ? '1rem' : '0'
                                 }}>
-                                    <p style={{ color: 'var(--text-muted-on-light)', lineHeight: '1.7', fontSize: '1.1rem', margin: 0 }}>{item.a}</p>
+                                    <p style={{ color: 'var(--text-muted-on-light)', lineHeight: '1.8', fontSize: '1rem', margin: 0, whiteSpace: 'pre-line' }}>{item.a}</p>
                                 </div>
                             </div>
                         );
