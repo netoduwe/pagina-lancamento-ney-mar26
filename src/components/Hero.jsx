@@ -62,7 +62,7 @@ const Hero = () => {
                 </div>
 
                 <h1 style={{
-                    fontSize: '4.5rem',
+                    fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
                     marginBottom: '2.5rem',
                     letterSpacing: '-0.03em',
                     lineHeight: '1.05'
