@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { buildFormUrlWithUTM } from '../utils/utmCapture';
+
+const FORM_BASE_URL = 'https://links.fullfunnel.app/widget/form/fcI4szJ2BBj65rKkNV2t';
 
 const Hero = () => {
+    const formUrl = useMemo(() => buildFormUrlWithUTM(FORM_BASE_URL), []);
     return (
         <section className="section-padding fade-in-section" style={{
             paddingTop: '90px',
@@ -142,7 +146,7 @@ const Hero = () => {
                     {/* Embedded Form */}
                     <div style={{ width: '100%', maxWidth: '605px', height: '380px' }}>
                         <iframe
-                            src="https://links.fullfunnel.app/widget/form/fcI4szJ2BBj65rKkNV2t"
+                            src={formUrl}
                             style={{ width: '100%', height: '100%', border: 'none' }}
                             id="inline-fcI4szJ2BBj65rKkNV2t"
                             data-layout="{'id':'INLINE'}"

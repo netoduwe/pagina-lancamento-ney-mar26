@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { X } from 'lucide-react';
+import { buildFormUrlWithUTM } from '../utils/utmCapture';
+
+const FORM_BASE_URL = 'https://links.fullfunnel.app/widget/form/fcI4szJ2BBj65rKkNV2t';
 
 const LeadModal = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const formUrl = useMemo(() => buildFormUrlWithUTM(FORM_BASE_URL), []);
 
     useEffect(() => {
         const handleOpen = () => setIsOpen(true);
@@ -145,7 +149,7 @@ const LeadModal = () => {
                     minHeight: '380px' // Initial minimum height for the form
                 }}>
                     <iframe
-                        src="https://links.fullfunnel.app/widget/form/fcI4szJ2BBj65rKkNV2t"
+                        src={formUrl}
                         style={{ width: '100%', height: '100%', border: 'none', minHeight: '380px' }}
                         id="inline-fcI4szJ2BBj65rKkNV2t"
                         data-layout="{'id':'INLINE'}"
