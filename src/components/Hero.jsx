@@ -58,7 +58,8 @@ const Hero = () => {
                     margin: '0 auto 1.5rem',
                     padding: '0 20px'
                 }}>
-                    Do medo do primeiro atendimento à segurança para viver de atendimentos Nutricionais.
+                    Do medo do primeiro atendimento à <br />
+                    <span className="text-gold-gradient" style={{ fontStyle: 'italic' }}>segurança para viver de atendimentos Nutricionais.</span>
                 </h1>
 
                 <p style={{
