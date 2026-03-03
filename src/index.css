@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
+/* Responsive display utilities */
+.mobile-only {
+  display: none !important;
+}
+
+.desktop-only {
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block !important;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+}
+
 :root {
   /* Premium Palette - Match Reference */
   --bg-deep: #0B0E14;
@@ -227,7 +246,7 @@ p {
 /* Custom adjustment for mobile height of form */
 @media (max-width: 768px) {
   .section-padding {
-    padding: 80px 20px;
+    padding: 80px 10px;
   }
 }
 

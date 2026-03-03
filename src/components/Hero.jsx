@@ -50,16 +50,21 @@ const Hero = () => {
                 {/* Masterclass Badge Removed for Space Optimization */}
 
                 <h1 style={{
-                    fontSize: 'clamp(2.1rem, 5vw, 3.2rem)',
+                    fontSize: 'clamp(1.65rem, 5.5vw, 3.2rem)',
+                    paddingTop: '30px', /* User requested 10px from the top of the section, but with masterclass badge gone, we need a bit to not touch the very top */
                     marginBottom: '1rem',
                     letterSpacing: '-0.03em',
                     lineHeight: '1.2',
                     maxWidth: '1100px',
                     margin: '0 auto 1.5rem',
-                    padding: '0 20px'
+                    padding: '0 10px'
                 }}>
-                    Do medo do primeiro atendimento à <br />
-                    <span className="text-gold-gradient" style={{ fontStyle: 'italic' }}>segurança para viver de atendimentos Nutricionais.</span>
+                    Do medo do primeiro atendimento <br className="mobile-only" />
+                    à <br className="desktop-only" />
+                    <span className="text-gold-gradient" style={{ fontStyle: 'italic' }}>
+                        segurança para viver de <br className="mobile-only" />
+                        atendimentos Nutricionais.
+                    </span>
                 </h1>
 
                 <p style={{
@@ -77,10 +82,10 @@ const Hero = () => {
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: 'minmax(0, 1fr)',
-                    gap: '1.5rem',
+                    gap: window.innerWidth <= 768 ? '1rem' : '1.5rem',
                     maxWidth: '850px',
                     margin: '0 auto',
-                    padding: '0 20px'
+                    padding: '0 10px'
                 }}>
                     {/* Info Boxes Grid - Side by side on larger screens */}
                     <div style={{
@@ -138,7 +143,7 @@ const Hero = () => {
                     <div style={{
                         width: '100%',
                         height: '420px',
-                        marginTop: '0.5rem'
+                        marginTop: '0rem'
                     }}>
                         <iframe
                             src={formUrl}
