@@ -51,13 +51,13 @@ const Hero = () => {
 
                 <h1 style={{
                     fontSize: 'clamp(1.65rem, 5.5vw, 3.2rem)',
-                    paddingTop: window.innerWidth <= 768 ? '120px' : '15px',
                     marginBottom: '1rem',
                     letterSpacing: '-0.03em',
                     lineHeight: '1.2',
                     maxWidth: '1100px',
                     margin: '0 auto 1.5rem',
-                    padding: '0 10px'
+                    padding: '0 10px',
+                    paddingTop: window.innerWidth <= 768 ? '120px' : '15px'
                 }}>
                     Do medo do 1º atendimento <br className="mobile-only" />
                     à <br className="desktop-only" />
