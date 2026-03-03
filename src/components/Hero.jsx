@@ -57,7 +57,7 @@ const Hero = () => {
                     maxWidth: '1100px',
                     margin: '0 auto 1.5rem',
                     padding: '0 10px',
-                    paddingTop: window.innerWidth <= 768 ? '120px' : '15px'
+                    paddingTop: window.innerWidth <= 768 ? '50px' : '15px'
                 }}>
                     Do medo do 1º atendimento <br className="mobile-only" />
                     à <br className="desktop-only" />
