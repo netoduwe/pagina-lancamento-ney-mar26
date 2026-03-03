@@ -34,7 +34,7 @@ const PainPoints = () => {
             <div style={{ position: 'absolute', top: '10%', right: '-10%', width: '400px', height: '400px', background: 'rgba(212, 175, 55, 0.03)', borderRadius: '50%', filter: 'blur(80px)', pointerEvents: 'none' }}></div>
 
             <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-                <h2 className="font-serif" style={{ fontSize: '3.5rem', marginBottom: '1.5rem', color: 'var(--text-on-light)', lineHeight: '1.1', letterSpacing: '-0.02em' }}>
+                <h2 className="font-serif" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.5rem', color: 'var(--text-on-light)', lineHeight: '1.1', letterSpacing: '-0.02em' }}>
                     Você aprendeu a Nutrição <br /> <span className="text-gold-gradient">em pedaços.</span>
                 </h2>
                 <p style={{ maxWidth: '650px', margin: '0 auto 5rem', fontSize: '1.3rem', color: 'var(--text-muted-on-light)', lineHeight: '1.6', fontWeight: 300 }}>
@@ -43,7 +43,7 @@ const PainPoints = () => {
 
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(400px, 100%), 1fr))',
                     gap: '2.5rem',
                     maxWidth: '1000px',
                     margin: '0 auto'

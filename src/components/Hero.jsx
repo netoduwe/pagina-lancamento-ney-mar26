@@ -7,10 +7,9 @@ const Hero = () => {
     const formUrl = useMemo(() => buildFormUrlWithUTM(FORM_BASE_URL), []);
     return (
         <section className="section-padding fade-in-section" style={{
-            paddingTop: '90px',
-            paddingBottom: '140px',
             textAlign: 'center',
-            position: 'relative'
+            position: 'relative',
+            overflow: 'hidden'
         }}>
 
             {/* Premium Animated Grid */}
@@ -48,124 +47,113 @@ const Hero = () => {
             }}></div>
 
             <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-
-                <div style={{ display: 'inline-block', marginBottom: '2rem', padding: '10px 28px', background: 'rgba(212, 175, 55, 0.1)', borderRadius: '50px', border: '1px solid var(--gold-primary)' }}>
-                    <span style={{
-                        color: 'var(--gold-primary)',
-                        textTransform: 'uppercase',
-                        letterSpacing: '3px',
-                        fontSize: '0.85rem',
-                        fontWeight: 700,
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px'
-                    }}>
-                        <span style={{ width: '8px', height: '8px', backgroundColor: 'var(--gold-primary)', borderRadius: '50%', display: 'inline-block', boxShadow: '0 0 10px var(--gold-primary)' }}></span>
-                        MASTERCLASS AO VIVO
-                    </span>
-                </div>
+                {/* Masterclass Badge Removed for Space Optimization */}
 
                 <h1 style={{
-                    fontSize: 'clamp(2.5rem, 8vw, 4.5rem)',
-                    marginBottom: '2.5rem',
+                    fontSize: 'clamp(2.1rem, 5vw, 3.2rem)',
+                    marginBottom: '1rem',
                     letterSpacing: '-0.03em',
-                    lineHeight: '1.05'
+                    lineHeight: '1.2',
+                    maxWidth: '1100px',
+                    margin: '0 auto 1.5rem',
+                    padding: '0 20px'
                 }}>
-                    Do medo do primeiro atendimento à <br />
-                    <span className="text-gold-gradient" style={{ fontStyle: 'italic', paddingRight: '10px' }}>segurança para viver de atendimentos Nutricionais.</span>
+                    Do medo do primeiro atendimento à segurança para viver de atendimentos Nutricionais.
                 </h1>
 
                 <p style={{
-                    fontSize: '1.2rem',
-                    maxWidth: '920px',
-                    margin: '0 auto 0.5rem',
+                    fontSize: 'clamp(0.95rem, 3vw, 1.15rem)',
+                    maxWidth: '800px',
+                    margin: '0 auto 1.5rem',
                     color: 'var(--text-secondary)',
-                    fontWeight: 500,
+                    fontWeight: 400,
                     lineHeight: '1.5'
                 }}>
                     A prática clínica que a faculdade não te deu, revelada em uma Masterclass inédita.
                 </p>
 
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', width: '100%' }}>
-
-                    {/* Event Info Boxes */}
+                {/* Main Hero Content Layout - Centered Single Column */}
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'minmax(0, 1fr)',
+                    gap: '1.5rem',
+                    maxWidth: '850px',
+                    margin: '0 auto',
+                    padding: '0 20px'
+                }}>
+                    {/* Info Boxes Grid - Side by side on larger screens */}
                     <div style={{
-                        marginTop: '1rem',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '12px',
-                        width: '100%',
-                        maxWidth: '600px'
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                        gap: '1rem',
+                        width: '100%'
                     }}>
-                        {/* Box 1: Date */}
+                        {/* Event Date Box */}
                         <div style={{
-                            background: 'rgba(0,0,0,0.6)',
-                            border: '1px solid rgba(255,255,255,0.15)',
+                            background: 'rgba(0,0,0,0.4)',
+                            border: '1px solid rgba(255,255,255,0.1)',
                             borderRadius: '12px',
-                            padding: '16px 24px',
+                            padding: '12px 15px',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            gap: '12px',
-                            backdropFilter: 'blur(10px)'
+                            gap: '10px',
+                            backdropFilter: 'blur(10px)',
                         }}>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                                 <line x1="16" y1="2" x2="16" y2="6"></line>
                                 <line x1="8" y1="2" x2="8" y2="6"></line>
                                 <line x1="3" y1="10" x2="21" y2="10"></line>
                             </svg>
-                            <span style={{ color: 'var(--text-primary)', fontSize: '1rem', fontWeight: 500, letterSpacing: '0.5px' }}>
+                            <span style={{ color: 'var(--text-primary)', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.5px' }}>
                                 17 DE MARÇO • ÀS 20H • AO VIVO
                             </span>
                         </div>
 
-                        {/* Box 2: Offer Warning */}
+                        {/* Offer Warning Box */}
                         <div style={{
-                            background: 'rgba(0,0,0,0.6)',
-                            border: '1px solid rgba(255,255,255,0.15)',
+                            background: 'rgba(212, 175, 55, 0.05)',
+                            border: '1px solid rgba(212, 175, 55, 0.2)',
                             borderRadius: '12px',
-                            padding: '16px 24px',
+                            padding: '12px 15px',
                             display: 'flex',
                             alignItems: 'center',
-                            justifyContent: 'center',
-                            gap: '12px',
+                            gap: '10px',
                             backdropFilter: 'blur(10px)',
-                            textAlign: 'left'
+                            textAlign: 'left',
                         }}>
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ minWidth: '28px' }}>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ minWidth: '20px' }}>
                                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                <path d="M6 12V9a9 9 0 0 1 18 0v3"></path>
+                                <path d="M6 12V9a9 0 0 1 18 0v3"></path>
                             </svg>
-                            <span style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.4' }}>
-                                <strong style={{ color: 'var(--text-primary)', textTransform: 'uppercase' }}>Ao final:</strong> Aproveite a condição <span style={{ color: 'var(--gold-primary)' }}>"Black Friday"</span> da Semana do Consumidor para entrar na Pós-Graduação Nutrição Avançada.
+                            <span style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: '1.3' }}>
+                                <strong style={{ color: 'var(--text-primary)', textTransform: 'uppercase', fontSize: '0.75rem' }}>Ao final:</strong> Inicio da Semana do Consumidor
                             </span>
                         </div>
                     </div>
 
                     {/* Embedded Form */}
-                    <div style={{ width: '100%', maxWidth: '605px', height: '380px' }}>
+                    <div style={{
+                        width: '100%',
+                        height: '420px',
+                        marginTop: '0.5rem'
+                    }}>
                         <iframe
                             src={formUrl}
                             style={{ width: '100%', height: '100%', border: 'none' }}
                             id="inline-fcI4szJ2BBj65rKkNV2t"
                             data-layout="{'id':'INLINE'}"
-                            data-trigger-type="alwaysShow"
-                            data-trigger-value=""
-                            data-activation-type="alwaysActivated"
-                            data-activation-value=""
-                            data-deactivation-type="neverDeactivate"
-                            data-deactivation-value=""
                             data-form-name="POS-T2 - NA"
-                            data-height="480"
+                            data-height="420"
                             data-layout-iframe-id="inline-fcI4szJ2BBj65rKkNV2t"
                             data-form-id="fcI4szJ2BBj65rKkNV2t"
                             title="POS-T2 - NA"
                         ></iframe>
-                        <script src="https://links.fullfunnel.app/js/form_embed.js"></script>
                     </div>
 
-                    <p style={{ fontSize: '0.85rem', color: 'var(--text-tertiary)', letterSpacing: '0.5px' }}>
+                    {/* Additional Benefits or Trust Badges */}
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-tertiary)', letterSpacing: '0.5px', marginTop: '0.5rem' }}>
                         🔒 Acesso exclusivo para Nutricionistas
                     </p>
                 </div>

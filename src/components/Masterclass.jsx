@@ -23,7 +23,7 @@ const Masterclass = () => {
                     </span>
                 </div>
                 <div className="glass-panel" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center', padding: '3rem' }}>
-                    <h2 className="font-serif" style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'white' }}>
+                    <h2 className="font-serif" style={{ fontSize: 'clamp(2rem, 4.5vw, 2.5rem)', marginBottom: '1.5rem', color: 'white' }}>
                         O que você vai aprender <span className="text-gold-gradient">nesta aula exclusiva?</span>
                     </h2>
                     <p style={{ fontSize: '1.2rem', marginBottom: '3rem', color: 'rgba(255,255,255,0.7)', maxWidth: '750px', margin: '0 auto 3rem' }}>

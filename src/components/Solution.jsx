@@ -66,18 +66,13 @@ const TriquetaSVG = () => (
 
 const Solution = () => {
     return (
-        <section className="section-padding fade-in-section" style={{ background: 'var(--bg-light)', position: 'relative' }}>
+        <section className="solution-section section-padding fade-in-section" style={{ background: 'var(--bg-light)', position: 'relative', overflow: 'hidden' }}>
             <div className="container">
-                <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
-                    gap: '5rem',
-                    alignItems: 'center'
-                }}>
+                <div className="solution-grid">
                     {/* Left: Text */}
                     <div>
                         <h2 className="font-serif" style={{
-                            fontSize: '3rem',
+                            fontSize: 'clamp(2rem, 4.5vw, 3rem)',
                             marginBottom: '1.5rem',
                             lineHeight: '1.1',
                             color: 'var(--text-on-light)'

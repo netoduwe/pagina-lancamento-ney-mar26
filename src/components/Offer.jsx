@@ -5,7 +5,8 @@ const Offer = () => {
         <section id="oferta" className="section-padding fade-in-section" style={{
             background: 'var(--bg-deep)',
             textAlign: 'center',
-            position: 'relative'
+            position: 'relative',
+            overflow: 'hidden'
         }}>
             {/* Background Glow */}
             <div style={{
@@ -35,7 +36,7 @@ const Offer = () => {
                     Mês do Consumidor • Condição Única
                 </span>
 
-                <h2 className="font-serif" style={{ fontSize: '3rem', margin: '2rem 0 1rem', color: 'var(--text-primary)' }}>
+                <h2 className="font-serif" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', margin: '3rem 0 1.5rem', color: 'var(--text-primary)', lineHeight: '1.2' }}>
                     Por que entrar <span className="text-gold-gradient">nessa turma</span> agora?
                 </h2>
 
@@ -49,7 +50,6 @@ const Offer = () => {
                     padding: '3rem',
                     background: 'rgba(11, 11, 30, 0.6)',
                     border: '1px solid var(--gold-dim)',
-                    transform: 'scale(1.05)',
                     boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
                 }}>
                     <div style={{ textDecoration: 'line-through', color: 'var(--text-tertiary)', fontSize: '1.2rem', marginBottom: '0.5rem' }}>
