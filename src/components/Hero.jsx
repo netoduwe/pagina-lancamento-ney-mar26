@@ -51,7 +51,7 @@ const Hero = () => {
 
                 <h1 style={{
                     fontSize: 'clamp(1.65rem, 5.5vw, 3.2rem)',
-                    paddingTop: '30px', /* User requested 10px from the top of the section, but with masterclass badge gone, we need a bit to not touch the very top */
+                    paddingTop: '40px', /* Increased from 30px for better breathing room below countdown */
                     marginBottom: '1rem',
                     letterSpacing: '-0.03em',
                     lineHeight: '1.2',
@@ -82,7 +82,7 @@ const Hero = () => {
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: 'minmax(0, 1fr)',
-                    gap: window.innerWidth <= 768 ? '1rem' : '1.5rem',
+                    gap: window.innerWidth <= 768 ? '0.5rem' : '1.5rem', /* Reduced mobile gap to bring form closer */
                     maxWidth: '850px',
                     margin: '0 auto',
                     padding: '0 10px'
