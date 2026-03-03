@@ -59,7 +59,7 @@ const Hero = () => {
                     margin: '0 auto 1.5rem',
                     padding: '0 10px'
                 }}>
-                    Do medo do primeiro atendimento <br className="mobile-only" />
+                    Do medo do 1º atendimento <br className="mobile-only" />
                     à <br className="desktop-only" />
                     <span className="text-gold-gradient" style={{ fontStyle: 'italic' }}>
                         segurança para viver de <br className="mobile-only" />
