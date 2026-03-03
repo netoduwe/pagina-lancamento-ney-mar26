@@ -51,7 +51,7 @@ const Hero = () => {
 
                 <h1 style={{
                     fontSize: 'clamp(1.65rem, 5.5vw, 3.2rem)',
-                    paddingTop: '80px', /* Increased to 80px for a more premium breath between countdown and headline */
+                    paddingTop: window.innerWidth <= 768 ? '120px' : '15px',
                     marginBottom: '1rem',
                     letterSpacing: '-0.03em',
                     lineHeight: '1.2',
