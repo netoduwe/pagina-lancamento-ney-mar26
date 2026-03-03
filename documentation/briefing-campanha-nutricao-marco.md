@@ -33,7 +33,7 @@ Em março, utilizaremos a temática **"Mês do Consumidor"** com um ângulo de *
 
 ## 6. Diretrizes Criativas (Copy & Design)
 - **Visual**: Utilizar o selo do MEC e o logo da Anhanguera para gerar autoridade imediata. Fotos do Ney Felipe em ambiente clínico/estudo para reforçar credibilidade.
-- **Argumento Principal**: "Do medo do primeiro atendimento à segurança de ser uma referência: a prática clínica que a faculdade não te deu."
+- **Argumento Principal**: "Do medo do primeiro atendimento à segurança para viver de atendimentos Nutricionais: a prática clínica que a faculdade não te deu."
 - **CTA**: "Garanta sua vaga na Turma Fundadora."
 
 ## 7. Canais de Distribuição

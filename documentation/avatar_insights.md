@@ -25,4 +25,4 @@
 - **Preço/Custo-benefício**: Mensalidade atrativa para o volume de conteúdo.
 
 ## Big Idea para a Campanha
-> "Do medo do primeiro atendimento à segurança de ser uma referência: a prática clínica que a faculdade não te deu."
+> "Do medo do primeiro atendimento à segurança para viver de atendimentos Nutricionais: a prática clínica que a faculdade não te deu."

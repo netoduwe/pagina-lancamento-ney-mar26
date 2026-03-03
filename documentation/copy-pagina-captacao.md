@@ -1,7 +1,7 @@
 # Copy: Página de Captação — Pós-Graduação Nutrição Avançada
 
 ## [SEÇÃO 1: HERO / HEADLINE]
-**Headline**: Do medo do primeiro atendimento à segurança de ser uma referência: a prática clínica que a faculdade não te deu.
+**Headline**: Do medo do primeiro atendimento à segurança para viver de atendimentos Nutricionais: a prática clínica que a faculdade não te deu.
 
 **Subheadline**: Participe da aula exclusiva onde revelaremos o caminho para dominar o consultório e aproveite a condição "Black Friday" do Mês do Consumidor para a Turma Fundadora da Pós-Graduação Nutrição Avançada.
 

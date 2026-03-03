@@ -72,7 +72,7 @@ const Hero = () => {
                     lineHeight: '1.05'
                 }}>
                     Do medo do primeiro atendimento à <br />
-                    <span className="text-gold-gradient" style={{ fontStyle: 'italic', paddingRight: '10px' }}>segurança de ser referência.</span>
+                    <span className="text-gold-gradient" style={{ fontStyle: 'italic', paddingRight: '10px' }}>segurança para viver de atendimentos Nutricionais.</span>
                 </h1>
 
                 <p style={{
