@@ -27,62 +27,90 @@
 
 .sc-tape {
     position: absolute;
+    width: 100vw;
     white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sc-tape-inner {
+    display: flex;
+    width: max-content;
+}
+
+.sc-tape-inner span {
     font-weight: 900;
     font-size: 0.85rem;
     letter-spacing: 4px;
     text-transform: uppercase;
     padding: 12px 0;
-    width: max-content;
-    pointer-events: none;
-    z-index: 1;
+    display: block;
 }
 
 .sc-tape-1 {
     top: 12%;
-    left: -100%;
     background: var(--sc-orange);
     color: var(--sc-black);
-    animation: sc-slide-right 50s linear infinite;
+    transform: rotate(-5deg);
+    width: 120vw;
+    left: -10vw;
+}
+
+.sc-tape-1 .sc-tape-inner {
+    animation: sc-slide-left 60s linear infinite;
 }
 
 .sc-tape-2 {
     top: 85%;
-    left: -100%;
     background: var(--sc-yellow);
     color: var(--sc-black);
-    animation: sc-slide-left 40s linear infinite;
+    transform: rotate(3deg);
+    width: 120vw;
+    left: -10vw;
+}
+
+.sc-tape-2 .sc-tape-inner {
+    animation: sc-slide-right 50s linear infinite;
 }
 
 .sc-tape-3 {
     top: 50%;
-    left: -100%;
     background: rgba(255, 107, 0, 0.1);
     color: var(--sc-orange);
     border-top: 1px solid rgba(255, 107, 0, 0.3);
     border-bottom: 1px solid rgba(255, 107, 0, 0.3);
-    animation: sc-slide-right 70s linear infinite;
-    font-size: 0.7rem;
-    opacity: 0.6;
+    transform: rotate(-2deg);
+    width: 120vw;
+    left: -10vw;
 }
 
-@keyframes sc-slide-right {
-    0% {
-        transform: rotate(-5deg) translateX(0%);
-    }
+.sc-tape-3 span {
+    font-size: 0.7rem;
+    padding: 8px 0;
+}
 
-    100% {
-        transform: rotate(-5deg) translateX(50%);
-    }
+.sc-tape-3 .sc-tape-inner {
+    animation: sc-slide-left 80s linear infinite;
 }
 
 @keyframes sc-slide-left {
     0% {
-        transform: rotate(3deg) translateX(50%);
+        transform: translateX(0);
     }
 
     100% {
-        transform: rotate(3deg) translateX(0%);
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes sc-slide-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
 

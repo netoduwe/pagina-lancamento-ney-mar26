@@ -8,15 +8,22 @@ const tapeText = ' ★ SEMANA DO CONSUMIDOR ★ OFERTA INÉDITA ★ PÓS NUTRIÇ
 
 const SCHero = () => {
     const formUrl = useMemo(() => buildFormUrlWithUTM(FORM_BASE_URL), []);
-    const repeatedTape = tapeText.repeat(20);
+    const repeatedTape = tapeText.repeat(10); // Still repeated internally for density
+
+    const TapeContent = () => (
+        <div className="sc-tape-inner">
+            <span>{repeatedTape}</span>
+            <span>{repeatedTape}</span>
+        </div>
+    );
 
     return (
         <section className="sc-hero">
             {/* Sliding Tape Banners */}
             <div className="sc-tape-container">
-                <div className="sc-tape sc-tape-1">{repeatedTape}</div>
-                <div className="sc-tape sc-tape-2">{repeatedTape}</div>
-                <div className="sc-tape sc-tape-3">{repeatedTape}</div>
+                <div className="sc-tape sc-tape-1"><TapeContent /></div>
+                <div className="sc-tape sc-tape-2"><TapeContent /></div>
+                <div className="sc-tape sc-tape-3"><TapeContent /></div>
             </div>
 
             {/* Hero Content */}
