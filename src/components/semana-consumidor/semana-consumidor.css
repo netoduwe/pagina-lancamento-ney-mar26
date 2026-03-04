@@ -49,16 +49,16 @@
 }
 
 .sc-tape-1 {
-    top: 12%;
+    top: 0;
     background: var(--sc-orange);
     color: var(--sc-black);
-    transform: rotate(-5deg);
-    width: 120vw;
-    left: -10vw;
+    transform: none;
+    width: 100vw;
+    left: 0;
 }
 
 .sc-tape-1 .sc-tape-inner {
-    animation: sc-slide-left 60s linear infinite;
+    animation: sc-slide-left 150s linear infinite;
 }
 
 .sc-tape-2 {
@@ -71,7 +71,7 @@
 }
 
 .sc-tape-2 .sc-tape-inner {
-    animation: sc-slide-right 50s linear infinite;
+    animation: sc-slide-right 120s linear infinite;
 }
 
 .sc-tape-3 {
@@ -91,7 +91,7 @@
 }
 
 .sc-tape-3 .sc-tape-inner {
-    animation: sc-slide-left 80s linear infinite;
+    animation: sc-slide-left 180s linear infinite;
 }
 
 @keyframes sc-slide-left {
