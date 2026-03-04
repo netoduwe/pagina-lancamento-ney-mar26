@@ -134,7 +134,7 @@ const Hero = () => {
                                 <path d="M6 12V9a9 0 0 1 18 0v3"></path>
                             </svg>
                             <span style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: '1.3' }}>
-                                <strong style={{ color: 'var(--text-primary)', textTransform: 'uppercase', fontSize: '0.75rem' }}>Ao final:</strong> Inicio da Semana do Consumidor
+                                <strong style={{ color: 'var(--text-primary)', textTransform: 'uppercase', fontSize: '0.75rem' }}>Ao final:</strong> Inicio da Semana do Consumidor com oferta inédita da Pós Nutrição Avançada
                             </span>
                         </div>
                     </div>
