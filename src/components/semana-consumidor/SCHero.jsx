@@ -8,7 +8,7 @@ const tapeText = ' ★ SEMANA DO CONSUMIDOR ★ OFERTA INÉDITA ★ PÓS NUTRIÇ
 
 const SCHero = () => {
     const formUrl = useMemo(() => buildFormUrlWithUTM(FORM_BASE_URL), []);
-    const repeatedTape = tapeText.repeat(8);
+    const repeatedTape = tapeText.repeat(20);
 
     return (
         <section className="sc-hero">
