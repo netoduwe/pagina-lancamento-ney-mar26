@@ -8,10 +8,14 @@ import Offer from '../components/Offer';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 import LeadModal from '../components/LeadModal';
+import { trackPageView } from '../utils/pixel';
 import '../index.css';
 
 const SemanaDoConsumidorPage = () => {
     useEffect(() => {
+        // Rastreamento de PageView
+        trackPageView();
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { X } from 'lucide-react';
 import { buildFormUrlWithUTM } from '../utils/utmCapture';
+import { trackCustomEvent } from '../utils/pixel';
 
 const FORM_BASE_URL = 'https://links.fullfunnel.app/widget/form/fcI4szJ2BBj65rKkNV2t';
 
@@ -9,7 +10,10 @@ const LeadModal = () => {
     const formUrl = useMemo(() => buildFormUrlWithUTM(FORM_BASE_URL), []);
 
     useEffect(() => {
-        const handleOpen = () => setIsOpen(true);
+        const handleOpen = () => {
+            setIsOpen(true);
+            trackCustomEvent('ViewContent', { content_name: 'Lead Registration Modal' });
+        };
         window.addEventListener('open-lead-modal', handleOpen);
         return () => window.removeEventListener('open-lead-modal', handleOpen);
     }, []);

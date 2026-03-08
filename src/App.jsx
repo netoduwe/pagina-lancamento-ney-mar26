@@ -12,10 +12,15 @@ import Footer from './components/Footer';
 import CourseDetails from './components/CourseDetails';
 import ConsumerWeek from './components/ConsumerWeek';
 import LeadModal from './components/LeadModal';
+import { initPixel, trackPageView } from './utils/pixel';
 import './index.css';
 
 function App() {
   useEffect(() => {
+    // Inicialização do Pixel
+    initPixel();
+    trackPageView();
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
